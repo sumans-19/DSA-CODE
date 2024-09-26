@@ -91,3 +91,29 @@ int main() {
     printf("%d", ans); 
     return 0;
 }
+
+3}
+Sample Input 0
+
+3
+3
+2
+5
+b
+Sample Output 0
+
+8
+solution:
+
+int marks_summation(int* marks, int number_of_students, char gender) {
+  //Write your code here.
+    int sum = 0;
+    
+    for (int i = 0; i < number_of_students; i++) {
+        if ((gender == 'b' && i % 2 == 0) || (gender == 'g' && i % 2 != 0)) {
+            sum += marks[i];
+        }
+    }
+    
+    return sum;
+}
