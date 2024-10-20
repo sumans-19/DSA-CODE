@@ -281,102 +281,123 @@ jobs should be handled using a priority queue.
 Note: The Program should allow users to add or remove items from
 the queue and it should also display current status i.e. the total number
 of items in the queue.
-#include &lt;stdio.h&gt;
-#include&lt;stdlib.h&gt;
+#include <stdio.h>
+#include <stdlib.h>
 #define MAX 5
-int front=-1, rear=-1;
+
+int front = -1, rear = -1;
+
 typedef struct process
 {
-int pr;
-}job;
+    int pr;
+} job;
+
 job pjob[MAX];
+
 void insert()
 {
-int pr;
-if(rear==MAX-1)
-{
-printf(&quot;Overflow&quot;);
+    int pr;
+
+    if (rear == MAX - 1)
+    {
+        printf("Overflow");
+    }
+    else
+    {
+        printf("Enter PRIORITY: ");
+        scanf("%d", &pr);
+
+        if (rear == -1)
+        {
+            rear ++;
+            front ++;
+        }
+        else
+        {
+            rear++;
+        }
+        pjob[rear].pr = pr;
+    }
 }
-else
-{
-printf(&quot;Enter PRIORITY: &quot;);
-scanf(&quot;%d&quot;,&amp;pr);
-if(rear = = -1)
-{
-rear + +;
-front + +;
-}
-else
-{
-rear++;
-}
-pjob[rear].pr=pr;
-}
-}
+
 void delete()
 {
-int i, pos=0,pmax=0,pr;
-if(front==-1)
-{
-printf(&quot;Underflow\n&quot;);
-}
-else if(front==rear)
-{
-front=-1;
+    int i, pos = 0, pmax = 0, pr;
 
-rear=-1;
+    if (front == -1)
+    {
+        printf("Underflow\n");
+    }
+    else if (front == rear)
+    {
+        front = -1;
+        rear = -1;
+    }
+
+    else
+    {
+        for (i = front; i <= rear; i++)
+        {
+            if (pjob[i].pr > pmax)
+            {
+                pmax = pjob[i].pr;
+                pr = i;
+            }
+        }
+        for (i = pr; i <= rear; i++)
+        {
+            pjob[i].pr = pjob[i + 1].pr;
+        }
+        rear--;
+    }
 }
-else
-{
-for(i=front;i&lt;=rear;i++)
-{
-if(pjob[i].pr&gt;pmax)
-{
-pmax=pjob[i].pr;
-pr=i;
-}
-}
-for(i=pr;i&lt;=rear;i++)
-{
-pjob[i].pr=pjob[i+1].pr;
-}
-rear--;
-}
-}
+
 void display()
 {
-if(front==-1)
-{
-printf(&quot;Queue is Empty\n&quot;);
-}
-else
-{
-printf(&quot;PRIORITY&quot;);
-for(int i=front;i&lt;=rear;i++)
-{
-printf(&quot;%d&quot;, pjob[i].pr);
-}
-}
-}
-void main()
-{
-int ch;
-while(1)
-{
-printf(&quot;\n1.Insert\t 2.Display\t 3.Delete\t 4.Exit\n&quot;);
-printf(&quot;\nEnter your choice: &quot;);
-scanf(&quot;%d&quot;, &amp;ch);
-switch(ch)
-{
-case 1: insert(); break;
-case 2: display(); break;
-case 3: delete(); break;
-case 4: exit(0); break;
-default: printf(&quot;\nInvalid choice:\n&quot;); break;
-}
-}
+    if (front == -1)
+    {
+        printf("Queue is Empty\n");
+    }
+    else
+    {
+        printf("PRIORITY");
+        for (int i = front; i <= rear; i++)
+        {
+            printf("%d", pjob[i].pr);
+        }
+    }
 }
 
+void main()
+{
+    int ch;
+    while (1)
+    {
+        printf("\n1.Insert\t 2.Display\t 3.Delete\t 4.Exit\n");
+
+        printf("\nEnter your choice: ");
+        scanf("%d", &ch);
+
+        switch (ch)
+        {
+        case 1:
+            insert();
+            break;
+        case 2:
+            display();
+            break;
+        case 3:
+            delete ();
+            break;
+        case 4:
+            exit(0);
+            break;
+        default:
+            printf("\nInvalid choice:\n");
+            break;
+        }
+    }
+}
 
 
 
