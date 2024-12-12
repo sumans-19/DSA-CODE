@@ -1,8 +1,8 @@
-4) Design, Develop and implement menu driven program to simulate processing of
-batch jobs by a computer system. The scheduling of these jobs should be handled
-using a priority queue.
-Note: The Program should allow users to add or remove items from the queue and it should
-also display current status i.e. the total number of items in the queue.
+// 4) Design, Develop and implement menu driven program to simulate processing of
+// batch jobs by a computer system. The scheduling of these jobs should be handled
+// using a priority queue.
+// Note: The Program should allow users to add or remove items from the queue and it should
+// also display current status i.e. the total number of items in the queue.
 
 CODE : 
 #include <stdio.h>
