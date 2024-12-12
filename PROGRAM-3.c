@@ -1,13 +1,13 @@
-3) Design, Develop and Implement a Program in C for the following operations on
-expression.
-a. Read infix expression String (INFIX)
-b. Convert the infix expression (INFIX) to a postfix expression using stacks.
-c. Evaluate the postfix expression using stacks.
-d. Check the following test cases.
-Test Case 1: Infix = “(1+ (2-3) *4)”, Postfix=”123-4*+”, Result = -3
-Test Case 2: Infix = “4/2-2+3*3-4*2”, Postfix=”42/233*42*-+-”, Result = -1
-Note: Program should support for both parenthesized and free parenthesized expressions
-with the operators: +, -, *, /, % (Remainder), ^ (Power) and alphanumeric operands.
+// 3) Design, Develop and Implement a Program in C for the following operations on
+// expression.
+// a. Read infix expression String (INFIX)
+// b. Convert the infix expression (INFIX) to a postfix expression using stacks.
+// c. Evaluate the postfix expression using stacks.
+// d. Check the following test cases.
+// Test Case 1: Infix = “(1+ (2-3) *4)”, Postfix=”123-4*+”, Result = -3
+// Test Case 2: Infix = “4/2-2+3*3-4*2”, Postfix=”42/233*42*-+-”, Result = -1
+// Note: Program should support for both parenthesized and free parenthesized expressions
+// with the operators: +, -, *, /, % (Remainder), ^ (Power) and alphanumeric operands.
 
 CODE:
 
