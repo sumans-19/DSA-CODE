@@ -1,11 +1,11 @@
-5) Design, Develop and implement c program using singly linked list for the following
-scenario
-a. There are two linked list A and B containing the following data: A: 3,7,10,15,16,09,22,17,32
-and B: 16,02,09,13,37,08,10,01,28
-b. Create a linked list C that contains only those elements that are common in linked list A
-and B
-c. Create a linked list D which contains all elements of A as well as B ensures that there is no
-repetition of elements.
+// 5) Design, Develop and implement c program using singly linked list for the following
+// scenario
+// a. There are two linked list A and B containing the following data: A: 3,7,10,15,16,09,22,17,32
+// and B: 16,02,09,13,37,08,10,01,28
+// b. Create a linked list C that contains only those elements that are common in linked list A
+// and B
+// c. Create a linked list D which contains all elements of A as well as B ensures that there is no
+// repetition of elements.
 
 CODE : 
 #include <stdio.h>
