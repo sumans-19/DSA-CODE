@@ -1,9 +1,9 @@
-6) Design, Develop and implement C program for the following operations on doubly
-linked list.
-a. Create doubly linked list of N nodes with integer data by adding each node at the front.
-b. Delete the node of a given data if it is found, otherwise display appropriate message.
-c. Insert a node to the left of the node whose key value is read as input.
-d. Display the contents of the list.
+// 6) Design, Develop and implement C program for the following operations on doubly
+// linked list.
+// a. Create doubly linked list of N nodes with integer data by adding each node at the front.
+// b. Delete the node of a given data if it is found, otherwise display appropriate message.
+// c. Insert a node to the left of the node whose key value is read as input.
+// d. Display the contents of the list.
 
 CODE : 
 #include <stdio.h>
